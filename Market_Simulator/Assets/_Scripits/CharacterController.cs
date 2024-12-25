@@ -29,7 +29,7 @@ public class CharacterController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal") * currentSpeed;
         vertical = Input.GetAxis("Vertical")* currentSpeed;
 
-        Vector3 movement = (transform.forward * horizontal + transform.right * vertical) ;
+        Vector3 movement = (transform.forward * vertical + transform.right * horizontal) ;
 
         rb.linearVelocity = movement;
     }
