@@ -18,7 +18,7 @@ public class FPSCameraController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * sens;
         float mouseY = Input.GetAxisRaw("Mouse Y") * sens;
@@ -33,4 +33,6 @@ public class FPSCameraController : MonoBehaviour
 
     }
 
+
+   
 }

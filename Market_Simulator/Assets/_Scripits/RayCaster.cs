@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RayCaster : MonoBehaviour
@@ -7,15 +8,11 @@ public class RayCaster : MonoBehaviour
     Camera mainCam;
 
     [SerializeField] float range;
-    [SerializeField] Transform targetTransform;
+   
 
     private void Awake()
     {
         mainCam = GetComponent<Camera>();
-    }
-    void Start()
-    {
-        
     }
     void Update()
     {
@@ -32,7 +29,8 @@ public class RayCaster : MonoBehaviour
         RaycastHit hit; 
         if(Physics.Raycast(ray, out hit,range,targetLayer))
         {
-            hit.transform.gameObject.GetComponent<IRaycast>().HitRayCast(targetTransform,this.gameObject);
+           
+            
         }
     }
 }
